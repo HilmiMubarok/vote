@@ -1,0 +1,1 @@
+<?php $pemilih = tampilPemilih($_GET['id']); hapusPemilih($_GET['id']);  ?>

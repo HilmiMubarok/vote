@@ -1,0 +1,1 @@
+<?php $id = $_GET['id']; hapusKandidat($id); ?>
