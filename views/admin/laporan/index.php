@@ -25,23 +25,23 @@
     		<form action="<?= baseUrl('views/admin/laporan/cetak.php') ?>" method="post">
                 <div class="form-group">
                     <label>Nama Ketua Pelaksana</label>
-                    <input type="text" name="ketua" class="form-control">
+                    <input type="text" name="ketua" class="form-control" required>
                 </div>  
                 <div class="form-group">
                     <label>NIM Ketua Pelaksana</label>
-                    <input type="number" name="nim_ketua" class="form-control">
+                    <input type="number" name="nim_ketua" class="form-control" required>
                 </div> 
                 <div class="form-group">
                     <label>Nama Sekertaris</label>
-                    <input type="text" name="sekertaris" class="form-control">
+                    <input type="text" name="sekertaris" class="form-control" required>
                 </div>      
                 <div class="form-group">
                     <label>NIM Sekertaris</label>
-                    <input type="number" name="nim_sekertaris" class="form-control">
+                    <input type="number" name="nim_sekertaris" class="form-control" required>
                 </div>       
                 <div class="form-group">
                     <label>Hari Pelaksanaan</label>
-                    <input type="date" name="hari_pelaksanaan" class="form-control">
+                    <input type="date" name="hari_pelaksanaan" class="form-control" required>
                 </div>      
                 <button type="submit" class="btn btn-primary">Cetak</button>
             </form>

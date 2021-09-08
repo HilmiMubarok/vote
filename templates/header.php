@@ -67,19 +67,19 @@
                     <!-- ============================================================== -->
                     <a class="navbar-brand" href="#!">
                         <!-- Logo icon -->
-                        <b class="logo-icon">
+                        <!-- <b class="logo-icon"> -->
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- <i class="far fa-user"></i> -->
                             <!-- Dark Logo icon -->
-                            <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <!-- <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" /> -->
 
-                        </b>
+                        <!-- </b> -->
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
                             <!-- dark Logo text -->
-                            <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-
+                            <!-- <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" /> -->
+                            <h3 class="text-dark">E-Voting BEM UNISS</h3>
                         </span>
                     </a>
                     <!-- ============================================================== -->

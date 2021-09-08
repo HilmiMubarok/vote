@@ -28,11 +28,11 @@
                 	<form method="post" enctype="multipart/form-data">
                 		<div class="form-group">
                 			<label for="">Username</label>
-                			<input type="text" name="username" class="form-control" placeholder="Masukkan Username Admin">
+                			<input type="text" name="username" class="form-control" placeholder="Masukkan Username Admin" required>
                 		</div>
                 		<div class="form-group">
                             <label>Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Masukkan Password Admin">
+                            <input type="password" name="password" class="form-control" placeholder="Masukkan Password Admin" required>
                         </div>
                 		<button type="submit" name="btnAddAdmin" class="btn btn-primary">
                 			Simpan

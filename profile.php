@@ -2,12 +2,15 @@
 
 $value = ( isset($_SESSION['admin']) ? $_SESSION['admin']['username'] : $_SESSION['pemilih']['nim'] );
 $user  = getUser($value);
+
+$id  = ( isset($_SESSION['admin']) ? "admin" : "pemilih" );
+$url = baseUrl("page.php?$id=edit-password");
 // var_dump($value); die;
 ?>
 
 <?php include 'templates/header.php'; ?>
 
-<?php if (isset($_POST['btnUpdate'])) { updatePasswordUser($_POST, $value); } ?>
+<?php //if (isset($_POST['btnUpdate'])) { updatePasswordUser($_POST, $value); } ?>
 <div class="page-breadcrumb">
     <div class="row align-items-center">
         <div class="col-md-6 col-8 align-self-center">
@@ -33,7 +36,7 @@ $user  = getUser($value);
 	    <div class="col-lg-8 col-xlg-9 col-md-7">
 	        <div class="card">
 	            <div class="card-body">
-	                <form class="form-horizontal form-material mx-2" method="post">
+	                <form class="form-horizontal form-material mx-2" method="post" action="<?= $url ?>">
 	                    <div class="form-group">
 	                        <label class="col-md-12 mb-0">Nama Lengkap</label>
 	                        <div class="col-md-12">
@@ -44,11 +47,11 @@ $user  = getUser($value);
 	                        <label for="example-email" class="col-md-12">Username atau NIM</label>
 	                        <?php if (isset($user['nama_pemilih'])): ?>
 		                        <div class="col-md-12">
-		                            <input type="text" disabled readonly placeholder="johnathan@admin.com" class="form-control ps-0 form-control-line" name="example-email" id="example-email" value="<?= $user['nim'] ?>">
+		                            <input type="text" disabled readonly class="form-control ps-0 form-control-line" name="example-email" id="example-email" value="<?= $user['nim'] ?>">
 		                        </div>
 	                        <?php else: ?>
 		                        <div class="col-md-12">
-		                            <input type="text" placeholder="johnathan@admin.com" class="form-control ps-0 form-control-line" name="username" id="example-email" value="<?= $user['username'] ?>">
+		                            <input type="text" class="form-control ps-0 form-control-line" name="username" id="example-email" value="<?= $user['username'] ?>">
 		                        </div>
 	                        <?php endif ?>
 	                    </div>

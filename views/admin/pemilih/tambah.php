@@ -28,11 +28,11 @@
                 	<form method="post">
                 		<div class="form-group">
                 			<label for="">Nama Pemilih</label>
-                			<input type="text" name="nama_pemilih" class="form-control" placeholder="Masukkan Nama Pemilih">
+                			<input type="text" name="nama_pemilih" class="form-control" placeholder="Masukkan Nama Pemilih" required>
                 		</div>
                 		<div class="form-group">
                 			<label for="">NIM Pemilih</label>
-                			<input type="number" name="nim" class="form-control" placeholder="Masukkan NIM Pemilih">
+                			<input type="number" name="nim" class="form-control" placeholder="Masukkan NIM Pemilih" required>
                 		</div>
                 		<div class="form-group">
                 			<label for="">Password</label>

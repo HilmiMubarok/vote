@@ -26,7 +26,7 @@
                     <form method="POST">
                         <div class="form-group">
                             <label>Judul</label>
-                            <input type="text" name="judul" class="form-control" value="<?= ($panduan['num'] > 0 ? $panduan['panduan']['judul'] : null) ?>">
+                            <input type="text" name="judul" class="form-control" value="<?= ($panduan['num'] > 0 ? $panduan['panduan']['judul'] : null) ?>" required>
                         </div>
                         <div class="form-group">
                             <label>Isi</label>

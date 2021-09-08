@@ -159,4 +159,6 @@ $mpdf->SetDisplayMode('fullpage');
 
 $mpdf->WriteHTML($html);
 
-$mpdf->Output();
+$file_name = "Laporan E-Voting BEM - ".time(). ".pdf";
+
+$mpdf->Output($file_name, "D");

@@ -23,6 +23,7 @@ $status     = cekStatus($id_pemilih);
 </div>
 
 <div class="container-fluid">
+    <div class="simply-countdown"></div>
     <div class="row">
         
     <?php $no = 1; foreach($kandidat as $k): ?>
@@ -58,3 +59,28 @@ $status     = cekStatus($id_pemilih);
     <?php endforeach ?>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        getWaktu()
+    })
+
+    function getWaktu() {
+        var url = "<?= baseUrl('get_waktu.php') ?>";
+        $.ajax({
+            url : url,
+            type: "GET",
+            success: function (res) {
+                var tgl = new Date(res.waktu_selesai)
+                showCount('.simply-countdown', tgl)
+            },
+            error: function (response) {
+                if (response.responseText == 200) {
+                    showZeroCount('.simply-countdown')
+                }
+            }
+        })
+    }
+
+    
+</script>

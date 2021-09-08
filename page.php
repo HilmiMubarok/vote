@@ -92,6 +92,10 @@ switch ($page) {
         include "views/pemilih/hasil_pemilihan.php";
         break;
 
+    case ['edit-password', NULL]:
+        include "views/admin/edit_password.php";
+        break;
+
 
     // PEMILIH
 
@@ -117,6 +121,10 @@ switch ($page) {
 
     case [NULL, 'hasil-pemilihan']:
         include "views/pemilih/hasil_pemilihan.php";
+        break;
+
+    case [NULL, 'edit-password']:
+        include "views/pemilih/edit_password.php";
         break;
 
     default:

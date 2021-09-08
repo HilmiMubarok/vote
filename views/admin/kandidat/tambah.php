@@ -28,7 +28,7 @@
                 	<form method="post" enctype="multipart/form-data">
                 		<div class="form-group">
                 			<label for="">Nama Kandidat</label>
-                			<input type="text" name="nama_kandidat" class="form-control" placeholder="Masukkan Nama Kandidat">
+                			<input type="text" name="nama_kandidat" class="form-control" placeholder="Masukkan Nama Kandidat" required>
                 		</div>
                 		<div class="form-group">
                             <label>Foto Kandidat</label>

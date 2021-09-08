@@ -22,11 +22,21 @@ function resetPemilih($id)
 	$sql_update = $conn->query($update);
 
 	if ($sql_update) {
-		echo "
-			<div class='alert bg-success animated fadeIn text-center text-white footer mb-0'>
-				<h5>Data Telah Direset</h5>
-			</div>";
-		echo "<meta http-equiv='refresh' content='1.5;url=?admin=pemilih'>";
+		$delete_vote = "DELETE FROM vote WHERE pemilih_id = '$id' ";
+		if ($conn->query($delete_vote)) {
+			echo "
+				<div class='alert bg-success animated fadeIn text-center text-white footer mb-0'>
+					<h5>Data Telah Direset</h5>
+				</div>";
+			echo "<meta http-equiv='refresh' content='1.5;url=?admin=pemilih'>";
+		} else {
+
+			echo "
+				<div class='alert bg-danger animated fadeIn text-center text-white footer mb-0'>
+					<h5>Data Gagal Direset</h5>
+				</div>";
+			echo "<meta http-equiv='refresh' content='1.5;url=?admin=pemilih'>";
+		}
 	} else {
 		echo "
 			<div class='alert bg-danger animated fadeIn text-center text-white footer mb-0'>
